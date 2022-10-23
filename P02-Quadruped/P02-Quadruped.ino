@@ -23,7 +23,7 @@ const int ServoMaxTicks = 510; // amplada de pols en ticks per a posició 180°
 // Posicio inicial
 int posIniServo1 = 275;
 int posIniServo2 = 225;
-int posIniServo3 = 150;
+int posIniServo3 = 200;
 int posIniServo4 = 275;
 int posIniServo5 = 450;
 int posIniServo6 = 275;
@@ -302,7 +302,14 @@ void girE (unsigned int passos)
 
 giraCapDreta()
 {
-
+  int i = posIniServo1;
+  while (i < 490)
+  {
+    servoController.setPWM(1, 0, i)
+    i = i + 5;
+    delay(5);
+  }
+  
 }
 
 giraCapEsquerra();
