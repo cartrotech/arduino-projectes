@@ -1,5 +1,6 @@
 {
     "board": "arduino:avr:uno",
     "programmer": "arduino:avrispmkii",
-    "sketch": "P02-Quadruped/P02-Quadruped.ino"
+    "sketch": "P02-Quadruped/P02-Quadruped.ino",
+    "port": "/dev/ttyS0"
 }

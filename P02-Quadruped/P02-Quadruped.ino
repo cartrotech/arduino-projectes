@@ -51,8 +51,32 @@ void setup()
 void loop() 
 {
   posIni();
-  Endavant(1);
-  buscaObstacle();
+  if (Serial.available() > 0)
+  {
+    int mov = Serial.parseInt();
+    switch (mov)
+    {
+    case 1:
+      endavant(1);
+      break;
+
+    case 2:
+      enrere(1);
+      break;
+
+    case 3:
+      girD(3);
+      break;
+
+    case 4:
+      girE(3);
+      break;
+    
+    default:
+      posIni;
+      break;
+    }
+  }
 
 }
 
@@ -180,7 +204,7 @@ void buscaObstacle()
   delay(10);
 }
 
-void Endavant (unsigned int passos)
+void endavant (unsigned int passos)
 {
   while (passos-- > 0)
   {
