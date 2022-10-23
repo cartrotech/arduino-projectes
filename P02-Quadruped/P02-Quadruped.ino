@@ -300,7 +300,7 @@ void girE (unsigned int passos)
   centraCap();
 }
 
-giraCapDreta()
+void giraCapDreta()
 {
   int i = posIniServo1;
   while (i < 490)
@@ -312,7 +312,7 @@ giraCapDreta()
   
 }
 
-giraCapEsquerra();
+void giraCapEsquerra()
 {
   int i = posIniServo1;
   while (i > 130)
@@ -324,12 +324,12 @@ giraCapEsquerra();
   
 }
 
-centraCap();
+void centraCap()
 {
-  servoController.serPWM(1, 0, posIniServo1);
+  servoController.setPWM(1, 0, posIniServo1);
 }
 
-void menejaCap ();
+void menejaCap ()
 {
   int i = posIniServo1;
   while (i < 490)
