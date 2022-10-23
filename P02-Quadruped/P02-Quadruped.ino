@@ -51,7 +51,7 @@ void setup()
 void loop() 
 {
   posIni();
-  avant(1);
+  Endavant(1);
   buscaObstacle();
 
 }
@@ -158,39 +158,39 @@ void buscaObstacle()
 
       if (sumdreta > sumesquerra)
       {
-        giraEsquerra(3);
+        girE(3);
       }
       else
       {
-        giraDreta(3);
+        girD(3);
       }
 
       if (sumdreta >= 20)
       {
         enrere(3);
-        giraEsquerra(3);
+        girE(3);
       }
       else if (sumesquerra >= 20)
       {
         enrere(3);
-        giraDreta(3);
+        girD(3);
       }
     }
   }
   delay(10);
 }
 
-void giraDreta (unsigned int passos)
+void girD (unsigned int passos)
 {
 
 }
 
-void giraEsquerra (unsigned int passos)
+void girE (unsigned int passos)
 {
 
 }
 
-void avant (unsigned int passos)
+void Endavant (unsigned int passos)
 {
   while (passos-- > 0)
   {
