@@ -180,16 +180,6 @@ void buscaObstacle()
   delay(10);
 }
 
-void girD (unsigned int passos)
-{
-
-}
-
-void girE (unsigned int passos)
-{
-
-}
-
 void Endavant (unsigned int passos)
 {
   while (passos-- > 0)
@@ -244,4 +234,39 @@ void enrere (unsigned int passos)
     servoController.setPWM(5, 0, posIniServo5);
     servoController.setPWM(9, 0, posIniServo9);
   }
+}
+
+void girD (unsigned int passos)
+{
+  giraCapDreta();
+  while (passos-- > 0)
+  {
+    servoController.setPWM(5, 0, posIniServo5-67);
+    servoController.setPWM(9, 0, posIniServo9-67);
+    delay(100);
+    servoController.setPWM(2, 0, posIniServo2+67);
+    servoController.setPWM(8, 0, posIniServo8-67);
+    servoController.setPWM(4, 0, posIniServo4-67);
+    servoController.setPWM(6, 0, posIniServo6+67);
+    delay(100);
+    servoController.setPWM(5, 0, posIniServo5);
+    servoController.setPWM(9, 0, posIniServo9);
+    delay(100);
+    servoController.setPWM(5, 0, posIniServo3+67);
+    servoController.setPWM(9, 0, posIniServo7+67);
+    delay(100);
+    servoController.setPWM(2, 0, posIniServo2);
+    servoController.setPWM(8, 0, posIniServo8);
+    servoController.setPWM(4, 0, posIniServo4);
+    servoController.setPWM(6, 0, posIniServo6);
+    delay(100);
+    servoController.setPWM(3, 0, posIniServo3);
+    servoController.setPWM(7, 0, posIniServo7);
+  }
+  centraCap();
+}
+
+void girE (unsigned int passos)
+{
+
 }
