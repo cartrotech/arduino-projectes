@@ -299,3 +299,18 @@ void girE (unsigned int passos)
   }
   centraCap();
 }
+
+giraCapDreta()
+{
+
+}
+
+giraCapEsquerra();
+{
+
+}
+
+centraCap();
+{
+  servoController.serPWM(1, 0, posIniServo1);
+}
