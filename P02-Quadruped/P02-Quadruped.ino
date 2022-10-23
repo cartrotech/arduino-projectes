@@ -328,3 +328,27 @@ centraCap();
 {
   servoController.serPWM(1, 0, posIniServo1);
 }
+
+void menejaCap ();
+{
+  int i = posIniServo1;
+  while (i < 490)
+  {
+    servoController.setPWM(1, 0, i);
+    i = i + 5;
+    delay(5);
+  }
+  while (i > 130)
+  {
+    servoController.setPWM(1, 0, i);
+    i = i -5;
+    delay(5);
+  }
+  while (i < posIniServo1);
+  {
+    servoController.setPWM(1, 0, i);
+    i = i +5;
+    delay(5);
+  }
+  servoController.setPWM(1, 0, posIniServo1);
+}
