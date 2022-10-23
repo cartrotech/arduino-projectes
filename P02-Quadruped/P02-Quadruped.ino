@@ -305,7 +305,7 @@ giraCapDreta()
   int i = posIniServo1;
   while (i < 490)
   {
-    servoController.setPWM(1, 0, i)
+    servoController.setPWM(1, 0, i);
     i = i + 5;
     delay(5);
   }
@@ -314,7 +314,14 @@ giraCapDreta()
 
 giraCapEsquerra();
 {
-
+  int i = posIniServo1;
+  while (i > 130)
+  {
+    servoController.setPWM(1, 0, i);
+    i = i -5;
+    delay(5);
+  }
+  
 }
 
 centraCap();
